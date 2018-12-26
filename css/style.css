@@ -50,6 +50,9 @@ body,
 .main-wrapper {
     padding-top: 82px;
 }
+.main {
+    margin-bottom: 76px;
+}
 .header {
     width: 100%;
     height: 82px;
@@ -107,7 +110,7 @@ body,
     color: #222222;
 }
 .inputbox__input:focus {
-    background-color: #4e4e4e;
+    background-color: #5b5b5b;
     color: #ebebeb;
     box-shadow: 0 0 0 0.2rem rgba(77, 77, 77, 0.25);
 }
@@ -159,6 +162,188 @@ body,
 .nav-catalog .nav .nav-item .nav-link:hover {
     color: #2e2e2e;
     text-decoration: underline;
+}
+.page-title {
+    color: #40474f;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+.deallist {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.dealitem {
+    flex: 0 0 24%;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #dedede;
+    box-shadow: 0 0 5px 0 rgba(77, 77, 77, 0.25);
+    text-decoration: none !important;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.dealitem:not(:nth-child(4n+1)) {
+    margin-left: calc( (100% - (24% * 4)) / 3 );
+}
+.dealitem__info {
+    padding: 15px 15px 25px;
+}
+.dealitem__img {
+    display: flex;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    margin: 10px auto 20px;
+}
+.dealitem__img img {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+}
+.dealitem__text {
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.dealitem__price {
+    padding: 15px;
+    border-top: 1px solid #dedede;
+}
+
+.pagination {
+    width: 100%;
+    display: block;
+    text-align: right;
+    margin-top: 30px;
+}
+.pagination__btn {
+    display: inline-block;
+    background-color: #c1c1c1;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #38372d;
+    font-weight: 700;
+    padding: 13px 15px;
+    line-height: 1;
+    border-radius: 20px;
+}
+.pagination__btn.active {
+    background-color: #ffe400;
+}
+.pagination__btn:hover {
+    color: #38372d;
+    background-color: #c5c5c5;
+    text-decoration: none;
+}
+.pagination__btn:active {
+    color: #38372d;
+    background-color: #dbdbdb;
+    text-decoration: none;
+}
+.pagination__btn + .pagination__btn {
+    margin-left: 12px;
+}
+.pagination__btn_prev {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.pagination__btn_next {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.sidebar {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #dedede;
+    box-shadow: 0 0 5px 0 rgba(77, 77, 77, 0.25);
+}
+.sidebar__row {
+    border-bottom: 1px solid #dedede;
+    padding: 20px 20px 18px;
+}
+.sidebar__row:last-child {
+    border-bottom: none;
+}
+.sidebar__title {
+    font-weight: 700;
+    font-size: 15px;
+    color: #40474f;
+    text-transform: uppercase;
+}
+.sidebar__link {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+.sidebar__votes {
+    display: inline-block;
+    background-color: #ffe400;
+    font-size: 11px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    line-height: 1;
+}
+.sidebar__bull {
+    display: inline-block;
+    color: #c1c1c1;
+    font-size: 12px;
+}
+.sidebar__commets {
+    display: inline-block;
+    color: #c1c1c1;
+    font-size: 17px;
+    position: relative;
+    top: 4px;
+}
+.sidebar__commets-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #020202;
+    position: absolute;
+    top: 2px;
+    left: 24px;
+}
+.sidebar__raiting {
+    display: block;
+    margin-top: 11px;
+}
+.raiting-info {
+    display: block;
+    width: 90px;
+    height: 14px;
+    overflow: hidden;
+    font-size: 1px;
+    font-size: 0;
+    position: relative;
+}
+.raiting-info.rate0 { width: 10px; }
+.raiting-info.rate0 .icon {
+    display: none;
+}
+.raiting-info.rate1 { width: 28px; }
+.raiting-info.rate2 { width: 47px; }
+.raiting-info.rate3 { width: 66px; }
+.raiting-info.rate4 { width: 85px; }
+.raiting-info.rate5 { width: 90px; }
+.raiting-info.icon-star-half:before {
+    font-size: 14px;
+    color: #ffe400;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.raiting-info.rate5.icon-star-half:before {
+    display: none;
+}
+.raiting-info .icon {
+    display: inline-block;
+    font-size: 14px;
+    color: #ffe400;
+}
+.raiting-info .icon + .icon {
+    margin-left: 5px;
 }
 
 
