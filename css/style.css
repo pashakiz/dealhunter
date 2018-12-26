@@ -26,7 +26,155 @@ body textarea:required:valid {
 body {
     font-family: "FuturaNew", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
+    color: #020202;
+    background-color: #efefef;
 }
-.header {}
-.footer {}
+/*---delete for mobile version---*/
+body,
+.container {
+    min-width: 1140px;
+}
+/*---delete for mobile version---*/
+.btn-clear {
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    padding: 0;
+    line-height: 1;
+    border: none;
+}
+.btn-clear:focus {
+    box-shadow: none;
+}
+.main-wrapper {
+    padding-top: 82px;
+}
+.header {
+    width: 100%;
+    height: 82px;
+    background-color: #2e2e2e;
+    padding: 20px 0 22px;
+}
+.logo {
+    display: block;
+    width: 65px;
+    height: 35px;
+}
+.logo img {
+    width: 100%;
+    height: auto;
+}
+.header .nav-link,
+.footer .nav-link {
+    color: #fff;
+    font-weight: 700;
+    padding: .538rem 1.25rem;
+}
+.header .nav-link:hover,
+.footer .nav-link:hover {
+    color: #d0d6da;
+}
+.inputbox {
+    position: relative;
+}
+.inputbox__input {
+    border-radius: 1.25rem;
+    background-color: #6b6b6b;
+    border: none;
+    color: #ebebeb;
+    font-weight: 300;
+    padding-right: 49px;
+    padding-left: 1.25rem;
+}
+.inputbox__input::placeholder { color: #ebebeb; font-weight: 300; }
+.inputbox__input:-ms-input-placeholder { color: #ebebeb; font-weight: 300; }
+.inputbox__input::-ms-input-placeholder { color: #ebebeb; font-weight: 300; }
+.inputbox__input::-webkit-input-placeholder { color: #ebebeb; font-weight: 300; }
+.inputbox__input:-moz-placeholder { color: #ebebeb; font-weight: 300; }
+.inputbox__input::-moz-placeholder { color: #ebebeb; font-weight: 300; }
+.inputbox__btn {
+    font-size: 17px;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    right: 20px;
+    color: #fcfcfc;
+}
+.inputbox__btn:hover {
+    color: #222222;
+}
+.inputbox__input:focus {
+    background-color: #4e4e4e;
+    color: #ebebeb;
+    box-shadow: 0 0 0 0.2rem rgba(77, 77, 77, 0.25);
+}
+.inputbox .icon {}
+.btn-subscribe {
+    background-color: #ffe400;
+    color: #40474f;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: .638rem 2.25rem;
+    border-radius: 1.25rem;
+    border: none;
+}
+.btn-subscribe:hover {
+    background-color: #e9d000;
+}
+.btn-subscribe:focus {
+    background-color: #ffd800;
+    box-shadow: 0 0 0 0.2rem rgba(77, 77, 77, 0.25);
+}
+.btn-subscribe > .icon {
+    display: inline-block;
+    transform: rotate(15deg);
+    margin-left: 6px;
+}
+.nav-catalog {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 rgba(77, 77, 77, 0.25);
+    margin-bottom: 40px;
+}
+.nav-catalog .nav {
+    justify-content: space-between;
+}
+.nav-catalog .nav .nav-item .nav-link {
+    color: #2e2e2e;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 1rem .5rem;
+}
+.nav-catalog .nav .nav-item:first-child .nav-link {
+    padding-left: 0;
+}
+.nav-catalog .nav .nav-item:last-child .nav-link {
+    padding-right: 0;
+}
+.nav-catalog .nav .nav-item .nav-link:hover {
+    color: #2e2e2e;
+    text-decoration: underline;
+}
+
+
+.footer {
+    width: 100%;
+    height: 82px;
+    background-color: #2e2e2e;
+    padding: 20px 0 22px;
+    margin-top: 76px;
+}
+.footer .btn-subscribe {
+    background-color: #cccccc;
+}
+.footer .btn-subscribe:hover {
+    background-color: #b8b8b8;
+}
+.footer .btn-subscribe:focus {
+    background-color: #b3b3b3;
+}
