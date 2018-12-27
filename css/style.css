@@ -350,6 +350,7 @@ body,
     display: inline-block;
     color: #c1c1c1;
     font-size: 12px;
+    margin: 0 5px;
 }
 .sidebar__commets {
     display: inline-block;
