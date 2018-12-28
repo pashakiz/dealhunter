@@ -454,11 +454,14 @@
                 var itemHeight = $('.product-images__carousel-inner').data('item-height');
                 var itemMargin = $('.product-images__carousel-inner').data('item-margin');
                 var selfHeight = $('.product-images__carousel-inner').data('selfHeight');
-                var step = $('.product-images__carousel-inner').data('step');
+//                var step = $('.product-images__carousel-inner').data('step');
                 console.log('up-'+step);
-                $('.product-images__carousel-inner').scrollTo(-step);
-                step -= itemHeight + itemMargin;
+                //step -= itemHeight + itemMargin;
+                var step = 0;
+                $('.product-images__carousel-inner').scrollTo(step);
+                step += itemHeight + itemMargin;
                 console.log(step+'-up');
+                $('.product-images__carousel-inner').data('step', step);
             });
 
             $('.product-images__carousel-btn.icon-arrow-down').on('click', function(){ //debugger;
@@ -485,14 +488,19 @@
 
         function initCarousel() {
             var item = $('#product-images-carousel').find('.imageitem');
-            var itemHeight = parseInt( item.css('height') );
-            var itemMargin = 3;
-            var step = itemHeight + itemMargin;
-            var selfHeight = (step * item.length) - itemMargin;
-            $('.product-images__carousel-inner').data('item-height', itemHeight);
-            $('.product-images__carousel-inner').data('item-margin', itemMargin);
-            $('.product-images__carousel-inner').data('selfHeight', selfHeight);
-            $('.product-images__carousel-inner').data('step', step);
+            if (item.length > 4) {
+                var itemHeight = parseInt( item.css('height') );
+                var itemMargin = 3;
+                var step = itemHeight + itemMargin;
+                var selfHeight = (step * item.length) - itemMargin;
+                $('.product-images__carousel-inner').data('item-height', itemHeight);
+                $('.product-images__carousel-inner').data('item-margin', itemMargin);
+                $('.product-images__carousel-inner').data('selfHeight', selfHeight);
+                $('.product-images__carousel-inner').data('step', step);
+            } else {
+                $('.product-images__carousel-btn').remove();
+                $('.product-images__carousel-inner').addClass('no-carousel');
+            }
         }
     </script>
 </body>

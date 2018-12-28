@@ -602,6 +602,9 @@ a:hover {
     height: 181px;
     overflow: hidden;
 }
+.product-images__carousel-inner.no-carousel {
+    margin: 13px 0;
+}
 .product-images__carousel-btn {
     width: 100%;
     height: 5px;
