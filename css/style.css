@@ -53,6 +53,13 @@ body,
 .main {
     margin-bottom: 76px;
 }
+a {
+    color: #1232ba;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
 .header {
     width: 100%;
     height: 82px;
@@ -73,6 +80,7 @@ body,
     color: #fff;
     font-weight: 700;
     padding: .538rem 1.25rem;
+    text-decoration: none;
 }
 .header .nav-link:hover,
 .footer .nav-link:hover {
@@ -115,7 +123,7 @@ body,
     box-shadow: 0 0 0 0.2rem rgba(77, 77, 77, 0.25);
 }
 .inputbox .icon {}
-.btn-subscribe {
+.btn-custom1 {
     background-color: #ffe400;
     color: #40474f;
     font-size: 12px;
@@ -125,14 +133,14 @@ body,
     border-radius: 1.25rem;
     border: none;
 }
-.btn-subscribe:hover {
+.btn-custom1:hover {
     background-color: #e9d000;
 }
-.btn-subscribe:focus {
+.btn-custom1:focus {
     background-color: #ffd800;
     box-shadow: 0 0 0 0.2rem rgba(77, 77, 77, 0.25);
 }
-.btn-subscribe > .icon {
+.btn-custom1 > .icon {
     display: inline-block;
     transform: rotate(15deg);
     margin-left: 6px;
@@ -152,6 +160,7 @@ body,
     font-weight: 500;
     text-transform: uppercase;
     padding: 1rem .5rem;
+    text-decoration: none;
 }
 .nav-catalog .nav .nav-item:first-child .nav-link {
     padding-left: 0;
@@ -217,6 +226,7 @@ body,
 .popular-list__row {
     display: table-row;
     color: inherit;
+    text-decoration: none;
 }
 .popular-list__row:hover {
     color: inherit;
@@ -366,6 +376,7 @@ body,
     padding: 13px 15px;
     line-height: 1;
     border-radius: 20px;
+    text-decoration: none;
 }
 .pagination__btn.active {
     background-color: #ffe400;
@@ -414,6 +425,7 @@ body,
     color: inherit;
     font-size: inherit;
     font-weight: inherit;
+    text-decoration: none;
 }
 .votes {
     display: inline-block;
@@ -455,7 +467,7 @@ body,
     display: block;
     margin-top: 11px;
 }
-.raiting-info {
+.rating-info {
     display: block;
     width: 90px;
     height: 14px;
@@ -464,33 +476,259 @@ body,
     font-size: 0;
     position: relative;
 }
-.raiting-info.rate0 { width: 10px; }
-.raiting-info.rate0 .icon {
+.rating-info.rate0 { width: 10px; }
+.rating-info.rate0 .icon {
     display: none;
 }
-.raiting-info.rate1 { width: 28px; }
-.raiting-info.rate2 { width: 47px; }
-.raiting-info.rate3 { width: 66px; }
-.raiting-info.rate4 { width: 85px; }
-.raiting-info.rate5 { width: 90px; }
-.raiting-info.icon-star-half:before {
+.rating-info.rate1 { width: 28px; }
+.rating-info.rate2 { width: 47px; }
+.rating-info.rate3 { width: 66px; }
+.rating-info.rate4 { width: 85px; }
+.rating-info.rate5 { width: 90px; }
+.rating-info.icon-star-half:before {
     font-size: 14px;
     color: #ffe400;
     position: absolute;
     right: 0;
     top: 0;
 }
-.raiting-info.rate5.icon-star-half:before {
+.rating-info.rate5.icon-star-half:before {
     display: none;
 }
-.raiting-info .icon {
+.rating-info .icon {
     display: inline-block;
     font-size: 14px;
     color: #ffe400;
 }
-.raiting-info .icon + .icon {
+.rating-info .icon + .icon {
     margin-left: 5px;
 }
+.breadcrumbs {
+    margin-bottom: 25px;
+}
+.breadcrumbs,
+.breadcrumbs a {
+    font-weight: 500;
+    font-size: 10px;
+    color: #2e2e2e;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.breadcrumbs a:hover {
+    color: #2e2e2e;
+    text-decoration: underline;
+}
+.product-wrap {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #dedede;
+    box-shadow: 0 0 5px 0 rgba(77, 77, 77, 0.25);
+}
+.product-head {
+    padding: 11px 20px 12px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 24px;
+}
+.label {
+    background-color: #efefef;
+    color: #40474f;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 14px 5px;
+    line-height: 1;
+}
+.label-lnk {
+    color: #40474f;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px 14px 6px;
+    line-height: 1;
+    text-decoration: none;
+}
+.label-lnk:hover {
+    text-decoration: none;
+}
+.label-lnk span {
+    background-color: #efefef;
+    padding: 1px 6px;
+    border-radius: 10px;
+    line-height: 1;
+}
+.store-img {
+    width: auto;
+    max-height: 28px;
+}
+.product-head .store-img {
+    margin-left: 20px;
+}
+.store-img img {
+    width: auto;
+    height: 100%;
+}
+.product-body {
+    margin-bottom: 24px;
+}
+.product-body__left {
+    padding: 0 0 20px 20px;
+}
+.product-body__right {
+    padding: 0 20px 20px;
+}
+.product-images {
+    width: 100%;
+    height: 213px;
+    margin-bottom: 22px;
+}
+.product-images__carousel {
+    width: 43px;
+    height: 213px;
+}
+.product-images__carousel .imageitem {
+    width: 43px;
+    height: 43px;
+    border: 1px solid #dedede;
+    overflow: hidden;
+    cursor: pointer;
+}
+.product-images__carousel .imageitem + .imageitem {
+    margin-top: 3px;
+}
+.product-images__carousel .imageitem img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+.product-images__main {
+    width: 270px;
+    height: 213px;
+    margin-left: 27px;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.product-images__main img {
+    width: 100%;
+    height: auto;
+}
+.voteshare {
+    margin-top: 25px;
+    padding: 25px 0 0 0;
+    border-top: 1px solid #dedede;
+}
+.voteshare__title {
+    display: inline-block;
+    color: #020202;
+    font-size: 11px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.voteshare__bull {
+    display: inline-block;
+    color: #ffe400;
+    vertical-align: middle;
+}
+.rating {
+    display: inline-block;
+    vertical-align: middle;
+}
+.rating > input { display: none; }
+.rating > label:before {
+    margin: 0 3px;
+    font-size: 14px;
+    display: inline-block;
+    content: "\e90a";
+}
+.rating > .half:before {
+    content: "\e90b";
+    position: absolute;
+}
+.rating > label {
+    margin: 0;
+    padding: 0;
+    color: #c1c1c1;
+    float: right;
+    cursor: pointer;
+}
+/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #ffe400;  } /* hover previous stars in list */
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #ffa200;  }
+.share-lnk {
+    color: #c1c1c1;
+    font-size: 15px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+.share-lnk.icon-facebook {
+    font-size: 15px;
+}
+.share-lnk.icon-twitter {
+    font-size: 19px;
+}
+.share-lnk.icon-mail {
+    font-size: 23px;
+}
+.share-lnk.icon-link {
+    font-size: 15px;
+}
+.share-lnk + .share-lnk {
+    margin-left: 10px;
+}
+.share-lnk:hover {
+    color: #c1c1c1;
+    text-decoration: none;
+    opacity: 0.8;
+}
+.product-body__title {
+    color: #020202;
+    font-size: 17px;
+    font-weight: 500;
+}
+.product-body__price {
+    margin: 15px 0 17px;
+}
+.product-body__price .price {
+    font-size: 17px;
+    height: 26px;
+    max-width: 85px;
+}
+.product-body__price .price-old {
+    font-size: 17px;
+    margin-right: 10px;
+}
+.product-body__rating {
+    margin-bottom: 15px;
+}
+.product-body__rating .votes {
+    vertical-align: middle;
+}
+.product-body__rating .rating-info {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.product-body__activity {
+    padding: 18px 3px;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 20px;
+}
+.product-body__activity .views-wrap {
+    margin-right: 15px;
+}
+.product-body__info {
+    margin-bottom: 25px;
+}
+
 .footer {
     width: 100%;
     height: 82px;
@@ -498,12 +736,12 @@ body,
     padding: 20px 0 22px;
     margin-top: 76px;
 }
-.footer .btn-subscribe {
+.footer .btn-custom1 {
     background-color: #cccccc;
 }
-.footer .btn-subscribe:hover {
+.footer .btn-custom1:hover {
     background-color: #b8b8b8;
 }
-.footer .btn-subscribe:focus {
+.footer .btn-custom1:focus {
     background-color: #b3b3b3;
 }
