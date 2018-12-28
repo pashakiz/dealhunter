@@ -558,6 +558,12 @@ a:hover {
     width: auto;
     max-height: 28px;
 }
+.store-img.ebay {
+    min-width: 70px;
+}
+.store-img.amazon {
+    min-width: 100px;
+}
 .product-head .store-img {
     margin-left: 20px;
 }
