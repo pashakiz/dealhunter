@@ -449,38 +449,34 @@
 
             initCarousel();
 
-            $('.product-images__carousel-btn.icon-arrow-up').on('click', function(){ //debugger;
-                console.log('up');
+            $('.product-images__carousel-btn').on('click', function(){
+                var item = $('#product-images-carousel').find('.imageitem');
                 var itemHeight = $('.product-images__carousel-inner').data('item-height');
                 var itemMargin = $('.product-images__carousel-inner').data('item-margin');
                 var selfHeight = $('.product-images__carousel-inner').data('selfHeight');
-//                var step = $('.product-images__carousel-inner').data('step');
-                console.log('up-'+step);
-                //step -= itemHeight + itemMargin;
-                var step = 0;
-                $('.product-images__carousel-inner').scrollTo(step);
-                step += itemHeight + itemMargin;
-                console.log(step+'-up');
-                $('.product-images__carousel-inner').data('step', step);
-            });
-
-            $('.product-images__carousel-btn.icon-arrow-down').on('click', function(){ //debugger;
-                var itemHeight = $('.product-images__carousel-inner').data('item-height');
-                var itemMargin = $('.product-images__carousel-inner').data('item-margin');
-                var selfHeight = $('.product-images__carousel-inner').data('selfHeight');
-                var step = $('.product-images__carousel-inner').data('step');
-                console.log('dw'+step);
-                $('.product-images__carousel-inner').scrollTo(step);
-                if (step == 0) {
-                    step = itemHeight + itemMargin;
-                } else {
-                    step += itemHeight + itemMargin;
-                }
                 var chek = ( selfHeight - ( (4*itemHeight) + (3*itemMargin)) );
-                if (step > chek) {
-                    step = 0;
+                var step = $('.product-images__carousel-inner').data('step');
+                var prev, next;
+                if (step > 0) {
+                    prev = step - (itemHeight+itemMargin);
+                    next = step + (itemHeight+itemMargin);
+                } else {
+                    prev = chek;
+                    next = itemHeight + itemMargin;
                 }
-                console.log(step+'dw');
+                if (next > chek) {
+                    next = 0;
+                }
+                if ( $(this).hasClass('icon-arrow-down') ) {
+                    console.log('icon-arrow-down');
+                    $('.product-images__carousel-inner').scrollTo(next);
+                    step = next;
+                }
+                if ( $(this).hasClass('icon-arrow-up') ) {
+                    console.log('icon-arrow-up');
+                    $('.product-images__carousel-inner').scrollTo(prev);
+                    step = prev;
+                }
                 $('.product-images__carousel-inner').data('step', step);
             });
 
@@ -491,8 +487,8 @@
             if (item.length > 4) {
                 var itemHeight = parseInt( item.css('height') );
                 var itemMargin = 3;
-                var step = itemHeight + itemMargin;
-                var selfHeight = (step * item.length) - itemMargin;
+                var step = 0;
+                var selfHeight = ( (itemHeight+itemMargin) * item.length) - itemMargin;
                 $('.product-images__carousel-inner').data('item-height', itemHeight);
                 $('.product-images__carousel-inner').data('item-margin', itemMargin);
                 $('.product-images__carousel-inner').data('selfHeight', selfHeight);
