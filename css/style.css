@@ -597,12 +597,30 @@ a:hover {
     width: 100%;
     height: auto;
 }
-
-
-
-
-
-
+.product-images__carousel-inner {
+    width: 100%;
+    height: 181px;
+    overflow: hidden;
+}
+.product-images__carousel-btn {
+    width: 100%;
+    height: 5px;
+    font-size: 10px;
+    color: #dedede;
+    text-align: center;
+    cursor: pointer;
+}
+.product-images__carousel-btn.icon-arrow-up {
+    margin-bottom: 8px;
+}
+.product-images__carousel-btn.icon-arrow-up:before,
+.product-images__carousel-btn.icon-arrow-down:before{
+    position: relative;
+    top: -2px;
+}
+.product-images__carousel-btn.icon-arrow-down {
+    margin-top: 8px;
+}
 .product-images__main {
     width: 270px;
     height: 213px;
@@ -728,7 +746,6 @@ a:hover {
 .product-body__info {
     margin-bottom: 25px;
 }
-
 .footer {
     width: 100%;
     height: 82px;
