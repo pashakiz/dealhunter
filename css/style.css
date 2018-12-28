@@ -489,7 +489,7 @@ a:hover {
     font-size: 14px;
     color: #ffe400;
     position: absolute;
-    right: 0;
+    right: -4px;
     top: 0;
 }
 .rating-info.rate5.icon-star-half:before {
