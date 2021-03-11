@@ -1,7 +1,13 @@
 # Deal Hunter
 
-http://lubus.ru/d/dealhunter/
+index
+http://lubus.ru/d/dealhunter/<br>
+https://pashakiz.github.io/dealhunter/
 
-http://lubus.ru/d/dealhunter/popular.html
+popular
+http://lubus.ru/d/dealhunter/popular.html<br>
+https://pashakiz.github.io/dealhunter/popular.html
 
-http://lubus.ru/d/dealhunter/product.html
+product
+http://lubus.ru/d/dealhunter/product.html<br>
+https://pashakiz.github.io/dealhunter/product.html
